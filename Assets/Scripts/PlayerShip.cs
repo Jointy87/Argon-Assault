@@ -12,13 +12,15 @@ public class PlayerShip : MonoBehaviour
 	[Tooltip("Vertical movement speed")]
 	[SerializeField] float ySpeed = 14f;
 	[Tooltip("Horizontal movement range")]
-	[SerializeField] float xMoveRange = 8.3f;
+	[SerializeField] float xMoveRange = 9f;
 	[Tooltip("Vertical movement range")]
-	[SerializeField] float yMoveRange = 4.5f;
+	[SerializeField] float yMoveRange = 5.5f;
+
+	[Header("Rotation")]
 	[Tooltip("Pitch per position on screen")]
-	[SerializeField] float positionPitchFactor = -2.5f;
+	[SerializeField] float positionPitchFactor = -5f;
 	[Tooltip("Yaw per position on screen")]
-	[SerializeField] float positionYawFactor = 3.5f;
+	[SerializeField] float positionYawFactor = 5f;
 	[Tooltip("Pitch while moving")]
 	[SerializeField] float movementPitchFactor = -20f;
 	[Tooltip("Yaw while moving")]
