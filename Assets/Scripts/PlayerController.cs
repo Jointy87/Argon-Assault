@@ -17,6 +17,9 @@ public class PlayerController : MonoBehaviour
 	[Tooltip("Yaw per position on screen")] [SerializeField] float positionYawFactor = 5f;
 	[Tooltip("Pitch while moving")] [SerializeField] float movementPitchFactor = -20f;
 	[Tooltip("Yaw while moving")] [SerializeField] float movementRollFactor = -25f;
+
+	[Header("Firing")]
+	[SerializeField] ParticleSystem[] bulletEmitters;
 	
 	//Cache
 	Rigidbody rb;
@@ -36,6 +39,7 @@ public class PlayerController : MonoBehaviour
 		{
 			ProcessMovement();
 			ProcessRotation();
+			ProcessFiring();
 		}
 	}
 
@@ -64,6 +68,23 @@ public class PlayerController : MonoBehaviour
 
 		transform.localPosition = new Vector3 (Mathf.Clamp(newXPos, -xMoveRange, xMoveRange), 
 			Mathf.Clamp(newYPos, -yMoveRange, yMoveRange), transform.localPosition.z);
+	}
+	
+	private void ProcessFiring()
+	{
+		foreach (ParticleSystem emitter in bulletEmitters)
+		{
+			if(Input.GetAxis("Jump") >= 1)
+			{
+				var emissionModule = emitter.emission;
+				emissionModule.enabled = true;
+			}
+			else
+			{
+				var emissionModule = emitter.emission;
+				emissionModule.enabled = false;
+			}
+		}
 	}
 
 	public void SetAliveToFalse()

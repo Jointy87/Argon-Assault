@@ -362,6 +362,9 @@ MonoBehaviour:
   positionYawFactor: 5
   movementPitchFactor: -20
   movementRollFactor: -25
+  bulletEmitters:
+  - {fileID: 3494561226754520840}
+  - {fileID: 4019616363887203599}
 --- !u!114 &8184177436270747206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1211,6 +1214,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5450452927268442286}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &4019616363887203599 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8965380182463137185, guid: f0ab5ab86031e2a4dad9cc2dfe715833,
+    type: 3}
+  m_PrefabInstance: {fileID: 5450452927268442286}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5482078311343764137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1283,6 +1292,12 @@ PrefabInstance:
 --- !u!4 &3494561226754520838 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8965380182463137199, guid: f0ab5ab86031e2a4dad9cc2dfe715833,
+    type: 3}
+  m_PrefabInstance: {fileID: 5482078311343764137}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &3494561226754520840 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8965380182463137185, guid: f0ab5ab86031e2a4dad9cc2dfe715833,
     type: 3}
   m_PrefabInstance: {fileID: 5482078311343764137}
   m_PrefabAsset: {fileID: 0}
