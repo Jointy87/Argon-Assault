@@ -471,6 +471,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1361684699}
     m_Modifications:
+    - target: {fileID: 1754910023302818, guid: 60f26d6465b822444ab5dadf5986bb35, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4655758116509614, guid: 60f26d6465b822444ab5dadf5986bb35, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.05184
@@ -506,6 +510,11 @@ PrefabInstance:
     - target: {fileID: 7544354340884130893, guid: 60f26d6465b822444ab5dadf5986bb35,
         type: 3}
       propertyPath: deathFXParent
+      value: 
+      objectReference: {fileID: 796108742}
+    - target: {fileID: 7544354340884130893, guid: 60f26d6465b822444ab5dadf5986bb35,
+        type: 3}
+      propertyPath: parentFX
       value: 
       objectReference: {fileID: 796108742}
     m_RemovedComponents: []
@@ -620,6 +629,11 @@ PrefabInstance:
     - target: {fileID: 4948441549883539485, guid: e14d375f5a36551479fc2f172353b1ba,
         type: 3}
       propertyPath: deathFXParent
+      value: 
+      objectReference: {fileID: 796108742}
+    - target: {fileID: 4948441549883539485, guid: e14d375f5a36551479fc2f172353b1ba,
+        type: 3}
+      propertyPath: parentFX
       value: 
       objectReference: {fileID: 796108742}
     m_RemovedComponents: []
@@ -868,6 +882,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1361684699}
     m_Modifications:
+    - target: {fileID: 1469320689751860, guid: a19af03b7c64771489f010af565cc649, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4248845843280306, guid: a19af03b7c64771489f010af565cc649, type: 3}
       propertyPath: m_LocalPosition.x
       value: 110.74348
@@ -903,6 +921,11 @@ PrefabInstance:
     - target: {fileID: 8490098548879330331, guid: a19af03b7c64771489f010af565cc649,
         type: 3}
       propertyPath: deathFXParent
+      value: 
+      objectReference: {fileID: 796108742}
+    - target: {fileID: 8490098548879330331, guid: a19af03b7c64771489f010af565cc649,
+        type: 3}
+      propertyPath: parentFX
       value: 
       objectReference: {fileID: 796108742}
     m_RemovedComponents: []
@@ -1116,6 +1139,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Music Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1941262673713072889, guid: ec179bbe5fb98c543a5cfbbc0d3a2b5c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1941262673713072895, guid: ec179bbe5fb98c543a5cfbbc0d3a2b5c,
         type: 3}
