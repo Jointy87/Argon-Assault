@@ -5,40 +5,55 @@ using UnityEngine;
 
 public class EnemyCollisionHandler : MonoBehaviour
 {
-    [SerializeField] GameObject deathFX;
-    [SerializeField] Transform deathFXParent;
+	//Parameters
+	[SerializeField] GameObject deathFX;
+	[Tooltip("The parent under which the deathFX will spawn during Runtime")]
+	[SerializeField] Transform deathFXParent;
+	[Tooltip("The amount of points scored upon destruction")] [SerializeField] int pointWorth;
 
-    private void Start()
-    {
-        AddBoxCollider();
-    }
+	//Cache
+	bool isAlive;
+	private void Start()
+	{
+		isAlive = true;
+		AddBoxCollider();
+	}
 
-    private void AddBoxCollider()
-    {
-        BoxCollider newBoxCollider = gameObject.AddComponent<BoxCollider>();
-    }
+	private void AddBoxCollider()
+	{
+		BoxCollider newBoxCollider = gameObject.AddComponent<BoxCollider>();
+	}
 
-    private void OnParticleCollision(GameObject other)
-    {
-        StartDeathSequence();
-    }
+	private void OnParticleCollision(GameObject other)
+	{
+		while (isAlive) //To avoid counting double score if being hit by both lasers
+		{
+			StartDeathSequence();
+			isAlive = false;
+		}
+	}
 
-    private void StartDeathSequence()
-    {
-        TriggerDeathFX();
-        DestroyShip();
-    }
+	private void StartDeathSequence()
+	{
+		TriggerDeathFX();
+		SendScoreToCounter();
+		DestroyShip();
+	}
 
-    private void TriggerDeathFX()
-    {
-        GameObject explosionFX = Instantiate(deathFX, transform.position, Quaternion.identity);
-        explosionFX.transform.parent = deathFXParent;
-        Destroy(explosionFX, 1f);
-    }
-    private void DestroyShip()
-    {
-        Destroy(gameObject);
-    }
+	private void TriggerDeathFX()
+	{
+		GameObject explosionFX = Instantiate(deathFX, transform.position, Quaternion.identity);
+		explosionFX.transform.parent = deathFXParent;
+		Destroy(explosionFX, 1f);
+	}
+	private void SendScoreToCounter()
+	{
+		FindObjectOfType<ScoreCounter>().AddToScore(pointWorth);
+	}
+	private void DestroyShip()
+	{
+		Destroy(gameObject);
+	}
 
-    
+	
 }
