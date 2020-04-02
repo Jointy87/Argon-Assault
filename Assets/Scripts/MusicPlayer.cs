@@ -7,6 +7,18 @@ public class MusicPlayer : MonoBehaviour
 
 	void Awake()
 	{
-		DontDestroyOnLoad(gameObject);
+		SetUpSingleton();
+	}
+
+	private void SetUpSingleton()
+	{
+		if (FindObjectsOfType(GetType()).Length > 1)
+		{
+			Destroy(gameObject);
+		}
+		else
+		{
+			DontDestroyOnLoad(gameObject);
+		}
 	}
 }
