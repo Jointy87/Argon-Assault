@@ -32,7 +32,6 @@ public class PlayerShip : MonoBehaviour
 	void Start()
 	{
 		rb = GetComponent<Rigidbody>();
-
 	}
 
 	void Update()
