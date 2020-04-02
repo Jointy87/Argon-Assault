@@ -48,6 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFX: {fileID: 8546090741749696173, guid: 81f7e2e4dd0d36e4d8d142bdf1f29703, type: 3}
+  deathFXParent: {fileID: 0}
+  pointWorth: 100
 --- !u!33 &33029633340997774
 MeshFilter:
   m_ObjectHideFlags: 0
