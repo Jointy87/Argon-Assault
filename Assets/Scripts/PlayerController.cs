@@ -3,41 +3,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerShip : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
 	//Parameters
 	[Header("Movement")]
-	[Tooltip("Horizontal movement speed")]
-	[SerializeField] float xSpeed = 16f;
-	[Tooltip("Vertical movement speed")]
-	[SerializeField] float ySpeed = 14f;
-	[Tooltip("Horizontal movement range")]
-	[SerializeField] float xMoveRange = 9f;
-	[Tooltip("Vertical movement range")]
-	[SerializeField] float yMoveRange = 5.5f;
+	[Tooltip("Horizontal movement speed")] [SerializeField] float xSpeed = 16f;
+	[Tooltip("Vertical movement speed")] [SerializeField] float ySpeed = 14f;
+	[Tooltip("Horizontal movement range")] [SerializeField] float xMoveRange = 9f;
+	[Tooltip("Vertical movement range")] [SerializeField] float yMoveRange = 5.5f;
 
 	[Header("Rotation")]
-	[Tooltip("Pitch per position on screen")]
-	[SerializeField] float positionPitchFactor = -5f;
-	[Tooltip("Yaw per position on screen")]
-	[SerializeField] float positionYawFactor = 5f;
-	[Tooltip("Pitch while moving")]
-	[SerializeField] float movementPitchFactor = -20f;
-	[Tooltip("Yaw while moving")]
-	[SerializeField] float movementRollFactor = -25f;
+	[Tooltip("Pitch per position on screen")] [SerializeField] float positionPitchFactor = -5f;
+	[Tooltip("Yaw per position on screen")] [SerializeField] float positionYawFactor = 5f;
+	[Tooltip("Pitch while moving")] [SerializeField] float movementPitchFactor = -20f;
+	[Tooltip("Yaw while moving")] [SerializeField] float movementRollFactor = -25f;
 	
 	//Cache
 	Rigidbody rb;
 
+	//States
+	bool isAlive;
+
 	void Start()
 	{
 		rb = GetComponent<Rigidbody>();
+		isAlive = true;
 	}
 
 	void Update()
 	{
-		ProcessMovement();
-		ProcessRotation();
+		if(isAlive)
+		{
+			ProcessMovement();
+			ProcessRotation();
+		}
 	}
 
 	private void ProcessRotation()
@@ -65,5 +64,10 @@ public class PlayerShip : MonoBehaviour
 
 		transform.localPosition = new Vector3 (Mathf.Clamp(newXPos, -xMoveRange, xMoveRange), 
 			Mathf.Clamp(newYPos, -yMoveRange, yMoveRange), transform.localPosition.z);
+	}
+
+	public void SetAliveToFalse()
+	{
+		isAlive = false;
 	}
 }
