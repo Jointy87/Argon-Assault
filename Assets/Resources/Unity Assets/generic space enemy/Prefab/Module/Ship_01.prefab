@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4232234352724882}
+  - component: {fileID: 4948441549883539485}
   - component: {fileID: 33491261700651830}
   - component: {fileID: 23691715908210222}
   m_Layer: 0
@@ -27,14 +28,27 @@ Transform:
   m_GameObject: {fileID: 1090395654553690}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.31, y: 0, z: -0.26}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalScale: {x: 10, y: 10, z: 10.000011}
   m_Children:
   - {fileID: 324458442130740940}
   - {fileID: 6494351594369615491}
   - {fileID: 8096927200847311281}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 21.701, y: -138.779, z: 3.325}
+  m_LocalEulerAnglesHint: {x: 21.898, y: -121.69101, z: 1.4260001}
+--- !u!114 &4948441549883539485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090395654553690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64ec12d8fc7b1eb49924311b4b93cd09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathFX: {fileID: 8546090741749696173, guid: 81f7e2e4dd0d36e4d8d142bdf1f29703, type: 3}
 --- !u!33 &33491261700651830
 MeshFilter:
   m_ObjectHideFlags: 0
