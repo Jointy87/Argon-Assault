@@ -41,6 +41,7 @@ public class EnemyCollisionHandler : MonoBehaviour
 		else
 		{
 			healthCounter.SubstractHealth();
+			TriggerHitFX();
 		}
 	}
 
@@ -66,5 +67,10 @@ public class EnemyCollisionHandler : MonoBehaviour
 		Destroy(gameObject);
 	}
 
-	
+	private void TriggerHitFX()
+	{
+		GameObject smallExplosionFX = Instantiate(hitFX, transform.position, Quaternion.identity);
+		smallExplosionFX.transform.parent = parentFX;
+		Destroy(smallExplosionFX, 1f);
+	}
 }
