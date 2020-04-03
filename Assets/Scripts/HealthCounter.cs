@@ -13,7 +13,6 @@ public class HealthCounter : MonoBehaviour
 	private void Start()
 	{
 		currentHealth = healthPoints;
-		print(currentHealth);
 	}
 
 	public void SubstractHealth()
