@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9022402431387113166}
   - component: {fileID: 9022402431387113161}
   - component: {fileID: 9022402431387113160}
-  - component: {fileID: 9022402431387113167}
+  - component: {fileID: 8846491244770455395}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -85,26 +85,25 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9022402431387113163}
   m_Enabled: 1
---- !u!114 &9022402431387113167
-MonoBehaviour:
+--- !u!95 &8846491244770455395
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9022402431387113163}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5cb22d331ef7d64796f917c6a455a32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  circuit: {fileID: 0}
-  lookAheadForTargetOffset: 1
-  lookAheadForTargetFactor: 0.1
-  lookAheadForSpeedOffset: 10
-  lookAheadForSpeedFactor: 0.2
-  progressStyle: 0
-  pointToPointThreshold: 4
-  target: {fileID: 9022402431387113166}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &9022402431364572018
 PrefabInstance:
   m_ObjectHideFlags: 0
